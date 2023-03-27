@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CA39036E29D16E29009261CF /* SampleWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA39036D29D16E29009261CF /* SampleWatchApp.swift */; };
-		CA39037029D16E29009261CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA39036F29D16E29009261CF /* ContentView.swift */; };
 		CA39037229D16E2C009261CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA39037129D16E2C009261CF /* Assets.xcassets */; };
 		CA39037529D16E2C009261CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA39037429D16E2C009261CF /* Preview Assets.xcassets */; };
 		CA39037F29D16E2D009261CF /* SampleWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA39037E29D16E2D009261CF /* SampleWatchTests.swift */; };
@@ -16,12 +15,39 @@
 		CA39038B29D16E2D009261CF /* SampleWatchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA39038A29D16E2D009261CF /* SampleWatchUITestsLaunchTests.swift */; };
 		CA39039129D16E2D009261CF /* SampleWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CA39039029D16E2D009261CF /* SampleWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CA39039629D16E2D009261CF /* SampleWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA39039529D16E2D009261CF /* SampleWatchApp.swift */; };
-		CA39039829D16E2D009261CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA39039729D16E2D009261CF /* ContentView.swift */; };
 		CA39039A29D16E2E009261CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA39039929D16E2E009261CF /* Assets.xcassets */; };
 		CA39039D29D16E2E009261CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA39039C29D16E2E009261CF /* Preview Assets.xcassets */; };
 		CA3903A729D16E2E009261CF /* SampleWatch_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903A629D16E2E009261CF /* SampleWatch_Watch_AppTests.swift */; };
 		CA3903B129D16E2E009261CF /* SampleWatch_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903B029D16E2E009261CF /* SampleWatch_Watch_AppUITests.swift */; };
 		CA3903B329D16E2E009261CF /* SampleWatch_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903B229D16E2E009261CF /* SampleWatch_Watch_AppUITestsLaunchTests.swift */; };
+		CA3903CF29D182B3009261CF /* NetworkRequestCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903CB29D182B1009261CF /* NetworkRequestCalls.swift */; };
+		CA3903D029D182B3009261CF /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903CC29D182B2009261CF /* NetworkRequest.swift */; };
+		CA3903D129D182B3009261CF /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903CD29D182B2009261CF /* APIConstants.swift */; };
+		CA3903D229D182B3009261CF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903CE29D182B3009261CF /* NetworkManager.swift */; };
+		CA3903D929D182D9009261CF /* iOSReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903D429D182D8009261CF /* iOSReachability.swift */; };
+		CA3903DA29D182D9009261CF /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903D529D182D8009261CF /* String.swift */; };
+		CA3903DB29D182D9009261CF /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903D629D182D8009261CF /* ImageDownloader.swift */; };
+		CA3903DC29D182D9009261CF /* Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903D729D182D8009261CF /* Json.swift */; };
+		CA3903E029D1831F009261CF /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903DF29D1831F009261CF /* AppConstants.swift */; };
+		CA3903E329D1833D009261CF /* ErrorNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903E229D1833D009261CF /* ErrorNetworkResponse.swift */; };
+		CA3903E429D1834C009261CF /* ErrorNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903E229D1833D009261CF /* ErrorNetworkResponse.swift */; };
+		CA3903E529D18350009261CF /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903DF29D1831F009261CF /* AppConstants.swift */; };
+		CA3903E629D18356009261CF /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903D629D182D8009261CF /* ImageDownloader.swift */; };
+		CA3903E729D18359009261CF /* Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903D729D182D8009261CF /* Json.swift */; };
+		CA3903E929D1835E009261CF /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903D529D182D8009261CF /* String.swift */; };
+		CA3903EE29D1856F009261CF /* CartoonListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903ED29D1856F009261CF /* CartoonListViewModel.swift */; };
+		CA3903F029D185AD009261CF /* CartoonNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903EF29D185AD009261CF /* CartoonNetworkResponse.swift */; };
+		CA3903FB29D18EB4009261CF /* CartoonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903FA29D18EB4009261CF /* CartoonListView.swift */; };
+		CA3903FC29D18ECA009261CF /* CartoonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903FA29D18EB4009261CF /* CartoonListView.swift */; };
+		CA3903FD29D18ED9009261CF /* CartoonListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903ED29D1856F009261CF /* CartoonListViewModel.swift */; };
+		CA3903FE29D18EDF009261CF /* CartoonNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903EF29D185AD009261CF /* CartoonNetworkResponse.swift */; };
+		CA3903FF29D18EF6009261CF /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903CD29D182B2009261CF /* APIConstants.swift */; };
+		CA39040029D18EF8009261CF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903CE29D182B3009261CF /* NetworkManager.swift */; };
+		CA39040129D18EFB009261CF /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903CC29D182B2009261CF /* NetworkRequest.swift */; };
+		CA39040229D18EFD009261CF /* NetworkRequestCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3903CB29D182B1009261CF /* NetworkRequestCalls.swift */; };
+		CA39040529D192EA009261CF /* WatchReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA39040329D19252009261CF /* WatchReachability.swift */; };
+		CA39040729D19869009261CF /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA39040629D19869009261CF /* URLImage.swift */; };
+		CA39040829D198F4009261CF /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA39040629D19869009261CF /* URLImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +105,6 @@
 /* Begin PBXFileReference section */
 		CA39036A29D16E29009261CF /* SampleWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA39036D29D16E29009261CF /* SampleWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleWatchApp.swift; sourceTree = "<group>"; };
-		CA39036F29D16E29009261CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CA39037129D16E2C009261CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA39037429D16E2C009261CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CA39037A29D16E2D009261CF /* SampleWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,7 +114,6 @@
 		CA39038A29D16E2D009261CF /* SampleWatchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleWatchUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CA39039029D16E2D009261CF /* SampleWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SampleWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA39039529D16E2D009261CF /* SampleWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleWatchApp.swift; sourceTree = "<group>"; };
-		CA39039729D16E2D009261CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CA39039929D16E2E009261CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA39039C29D16E2E009261CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CA3903A229D16E2E009261CF /* SampleWatch Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SampleWatch Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +121,21 @@
 		CA3903AC29D16E2E009261CF /* SampleWatch Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SampleWatch Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3903B029D16E2E009261CF /* SampleWatch_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleWatch_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		CA3903B229D16E2E009261CF /* SampleWatch_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleWatch_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CA3903CB29D182B1009261CF /* NetworkRequestCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestCalls.swift; sourceTree = "<group>"; };
+		CA3903CC29D182B2009261CF /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		CA3903CD29D182B2009261CF /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		CA3903CE29D182B3009261CF /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CA3903D429D182D8009261CF /* iOSReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSReachability.swift; sourceTree = "<group>"; };
+		CA3903D529D182D8009261CF /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		CA3903D629D182D8009261CF /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		CA3903D729D182D8009261CF /* Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json.swift; sourceTree = "<group>"; };
+		CA3903DF29D1831F009261CF /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		CA3903E229D1833D009261CF /* ErrorNetworkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorNetworkResponse.swift; sourceTree = "<group>"; };
+		CA3903ED29D1856F009261CF /* CartoonListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartoonListViewModel.swift; sourceTree = "<group>"; };
+		CA3903EF29D185AD009261CF /* CartoonNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartoonNetworkResponse.swift; sourceTree = "<group>"; };
+		CA3903FA29D18EB4009261CF /* CartoonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartoonListView.swift; sourceTree = "<group>"; };
+		CA39040329D19252009261CF /* WatchReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchReachability.swift; sourceTree = "<group>"; };
+		CA39040629D19869009261CF /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +187,7 @@
 		CA39036129D16E29009261CF = {
 			isa = PBXGroup;
 			children = (
+				CA3903C929D18286009261CF /* Shared */,
 				CA39036C29D16E29009261CF /* SampleWatch */,
 				CA39037D29D16E2D009261CF /* SampleWatchTests */,
 				CA39038729D16E2D009261CF /* SampleWatchUITests */,
@@ -175,7 +215,6 @@
 			isa = PBXGroup;
 			children = (
 				CA39036D29D16E29009261CF /* SampleWatchApp.swift */,
-				CA39036F29D16E29009261CF /* ContentView.swift */,
 				CA39037129D16E2C009261CF /* Assets.xcassets */,
 				CA39037329D16E2C009261CF /* Preview Content */,
 			);
@@ -211,7 +250,6 @@
 			isa = PBXGroup;
 			children = (
 				CA39039529D16E2D009261CF /* SampleWatchApp.swift */,
-				CA39039729D16E2D009261CF /* ContentView.swift */,
 				CA39039929D16E2E009261CF /* Assets.xcassets */,
 				CA39039B29D16E2E009261CF /* Preview Content */,
 			);
@@ -241,6 +279,76 @@
 				CA3903B229D16E2E009261CF /* SampleWatch_Watch_AppUITestsLaunchTests.swift */,
 			);
 			path = "SampleWatch Watch AppUITests";
+			sourceTree = "<group>";
+		};
+		CA3903C929D18286009261CF /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CA3903E129D18331009261CF /* Model */,
+				CA3903EC29D184A9009261CF /* View */,
+				CA3903EB29D1849C009261CF /* ViewModel */,
+				CA3903DE29D18314009261CF /* Constants */,
+				CA3903D329D182C9009261CF /* SupportingFiles */,
+				CA3903CA29D18290009261CF /* NetworkManager */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		CA3903CA29D18290009261CF /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				CA3903CD29D182B2009261CF /* APIConstants.swift */,
+				CA3903CE29D182B3009261CF /* NetworkManager.swift */,
+				CA3903CC29D182B2009261CF /* NetworkRequest.swift */,
+				CA3903CB29D182B1009261CF /* NetworkRequestCalls.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		CA3903D329D182C9009261CF /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CA3903D629D182D8009261CF /* ImageDownloader.swift */,
+				CA3903D729D182D8009261CF /* Json.swift */,
+				CA3903D429D182D8009261CF /* iOSReachability.swift */,
+				CA3903D529D182D8009261CF /* String.swift */,
+				CA39040329D19252009261CF /* WatchReachability.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		CA3903DE29D18314009261CF /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				CA3903DF29D1831F009261CF /* AppConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		CA3903E129D18331009261CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CA3903E229D1833D009261CF /* ErrorNetworkResponse.swift */,
+				CA3903EF29D185AD009261CF /* CartoonNetworkResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CA3903EB29D1849C009261CF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CA3903ED29D1856F009261CF /* CartoonListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CA3903EC29D184A9009261CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA3903FA29D18EB4009261CF /* CartoonListView.swift */,
+				CA39040629D19869009261CF /* URLImage.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -465,8 +573,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA39037029D16E29009261CF /* ContentView.swift in Sources */,
+				CA3903D929D182D9009261CF /* iOSReachability.swift in Sources */,
+				CA3903DC29D182D9009261CF /* Json.swift in Sources */,
+				CA3903D229D182B3009261CF /* NetworkManager.swift in Sources */,
+				CA3903D129D182B3009261CF /* APIConstants.swift in Sources */,
 				CA39036E29D16E29009261CF /* SampleWatchApp.swift in Sources */,
+				CA3903E029D1831F009261CF /* AppConstants.swift in Sources */,
+				CA3903D029D182B3009261CF /* NetworkRequest.swift in Sources */,
+				CA3903DA29D182D9009261CF /* String.swift in Sources */,
+				CA3903F029D185AD009261CF /* CartoonNetworkResponse.swift in Sources */,
+				CA3903E329D1833D009261CF /* ErrorNetworkResponse.swift in Sources */,
+				CA3903DB29D182D9009261CF /* ImageDownloader.swift in Sources */,
+				CA3903FB29D18EB4009261CF /* CartoonListView.swift in Sources */,
+				CA3903CF29D182B3009261CF /* NetworkRequestCalls.swift in Sources */,
+				CA39040729D19869009261CF /* URLImage.swift in Sources */,
+				CA3903EE29D1856F009261CF /* CartoonListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,8 +612,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA39039829D16E2D009261CF /* ContentView.swift in Sources */,
+				CA39040129D18EFB009261CF /* NetworkRequest.swift in Sources */,
+				CA39040029D18EF8009261CF /* NetworkManager.swift in Sources */,
+				CA39040229D18EFD009261CF /* NetworkRequestCalls.swift in Sources */,
+				CA3903FF29D18EF6009261CF /* APIConstants.swift in Sources */,
+				CA3903FD29D18ED9009261CF /* CartoonListViewModel.swift in Sources */,
+				CA3903E629D18356009261CF /* ImageDownloader.swift in Sources */,
 				CA39039629D16E2D009261CF /* SampleWatchApp.swift in Sources */,
+				CA3903E729D18359009261CF /* Json.swift in Sources */,
+				CA3903E429D1834C009261CF /* ErrorNetworkResponse.swift in Sources */,
+				CA3903FC29D18ECA009261CF /* CartoonListView.swift in Sources */,
+				CA39040529D192EA009261CF /* WatchReachability.swift in Sources */,
+				CA3903E929D1835E009261CF /* String.swift in Sources */,
+				CA3903FE29D18EDF009261CF /* CartoonNetworkResponse.swift in Sources */,
+				CA39040829D198F4009261CF /* URLImage.swift in Sources */,
+				CA3903E529D18350009261CF /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
