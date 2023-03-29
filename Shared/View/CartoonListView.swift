@@ -9,23 +9,26 @@ import SwiftUI
     
 
 struct CartoonListView: View {
-    @StateObject var viewModel = CartoonListViewModel()
+    
+    var cartoonList: CartoonList?
+    
     @State var selectedCartoon: CartoonNetworkResponse?
+    
     var body: some View {
         NavigationStack {
-            List(viewModel.cartoonList) { cartoon in
-                NavigationLink(destination: CartoonDetailView(cartoon: cartoon)) {
-                    HStack {
-                        URLImage(urlString: cartoon.image)
-                        Text(verbatim: cartoon.title)
+            if let list = cartoonList {
+                List(list) { cartoon in
+                    NavigationLink(destination: CartoonDetailView(cartoon: cartoon)) {
+                        HStack {
+                            URLImage(urlString: cartoon.image)
+                            Text(verbatim: cartoon.title)
+                        }
                     }
                 }
-            }
-            .navigationTitle("Cartoons")
-            .onAppear{
-                viewModel.getCartoonListDetails()
+                .navigationTitle("Cartoons")
             }
         }
+        
     }
 }
 

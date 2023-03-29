@@ -15,7 +15,7 @@ struct SampleWatchApp: App {
     
     var body: some Scene {
         WindowGroup {
-            CartoonListView()
+            TabBarView()
                 .onAppear {
                     self.checkConnectivity()
                 }

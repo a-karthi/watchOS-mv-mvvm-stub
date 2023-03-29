@@ -62,6 +62,10 @@
 		CA54AF1429D3082F00C9836B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54AF1229D3082F00C9836B /* Logger.swift */; };
 		CA54AF1929D30DCB00C9836B /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54AF1829D30DCB00C9836B /* NotificationHandler.swift */; };
 		CA54AF1A29D30DCB00C9836B /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54AF1829D30DCB00C9836B /* NotificationHandler.swift */; };
+		CA71C62B29D426A000494C52 /* LikedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA71C62A29D426A000494C52 /* LikedListView.swift */; };
+		CA71C62C29D426A000494C52 /* LikedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA71C62A29D426A000494C52 /* LikedListView.swift */; };
+		CAE651AC29D4148B003C0BA7 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE651AB29D4148B003C0BA7 /* TabBarView.swift */; };
+		CAE651AD29D4148B003C0BA7 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE651AB29D4148B003C0BA7 /* TabBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +161,8 @@
 		CA54AF0F29D3081800C9836B /* TestDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDataProvider.swift; sourceTree = "<group>"; };
 		CA54AF1229D3082F00C9836B /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		CA54AF1829D30DCB00C9836B /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
+		CA71C62A29D426A000494C52 /* LikedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedListView.swift; sourceTree = "<group>"; };
+		CAE651AB29D4148B003C0BA7 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,6 +377,8 @@
 				CA39040929D1BF01009261CF /* CartoonDetailView.swift */,
 				CA39040629D19869009261CF /* URLImage.swift */,
 				CA54AF0529D303D400C9836B /* LikeButtonView.swift */,
+				CAE651AB29D4148B003C0BA7 /* TabBarView.swift */,
+				CA71C62A29D426A000494C52 /* LikedListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -628,8 +636,10 @@
 				CA3903E329D1833D009261CF /* ErrorNetworkResponse.swift in Sources */,
 				CA3903DB29D182D9009261CF /* ImageDownloader.swift in Sources */,
 				CA3903FB29D18EB4009261CF /* CartoonListView.swift in Sources */,
+				CAE651AC29D4148B003C0BA7 /* TabBarView.swift in Sources */,
 				CA3903CF29D182B3009261CF /* NetworkRequestCalls.swift in Sources */,
 				CA39040729D19869009261CF /* URLImage.swift in Sources */,
+				CA71C62B29D426A000494C52 /* LikedListView.swift in Sources */,
 				CA3903EE29D1856F009261CF /* CartoonListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -674,8 +684,10 @@
 				CA3903FC29D18ECA009261CF /* CartoonListView.swift in Sources */,
 				CA39040529D192EA009261CF /* WatchReachability.swift in Sources */,
 				CA3903E929D1835E009261CF /* String.swift in Sources */,
+				CAE651AD29D4148B003C0BA7 /* TabBarView.swift in Sources */,
 				CA3903FE29D18EDF009261CF /* CartoonNetworkResponse.swift in Sources */,
 				CA39040829D198F4009261CF /* URLImage.swift in Sources */,
+				CA71C62C29D426A000494C52 /* LikedListView.swift in Sources */,
 				CA3903E529D18350009261CF /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

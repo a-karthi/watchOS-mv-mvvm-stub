@@ -7,25 +7,34 @@
 import SwiftUI
 
 struct LikeButtonView: View {
-    @State var isLiked = false
+    var cartoon: CartoonNetworkResponse?
     
     let notificationHandler = NotificationHandler()
     
+    @State var isLiked = false
+    
     var body: some View {
         Button(action: {
-            self.isLiked.toggle()
             self.request()
         }) {
-            Image(systemName: isLiked ? "heart.fill" : "heart")
-                .foregroundColor(isLiked ? .red : .gray)
+            Image(systemName: self.isLiked ? "heart.fill" : "heart")
+                .foregroundColor(self.isLiked ? .red : .gray)
         }
-        
+        .onAppear {
+            if let cart = cartoon {
+                self.isLiked = cart.isLiked
+            }
+        }
     }
     
     func request() {
-        if isLiked {
-            notificationHandler.requestAuthorization()
-            notificationHandler.scheduleNotification(title: "CNTV", subtitle: "Liked!", body: "You Liked", date: Date())
+        if let cart = cartoon {
+            cart.isLiked = !cart.isLiked
+            self.isLiked = cart.isLiked
+            if cart.isLiked {
+                notificationHandler.requestAuthorization()
+                notificationHandler.scheduleNotification(title: "CNTV", subtitle: "Liked!", body: "You Liked", date: Date())
+            }
         }
     }
 }

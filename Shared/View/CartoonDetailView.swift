@@ -35,7 +35,7 @@ struct CartoonDetailView: View {
                         .padding(.trailing,0)
                         .multilineTextAlignment(.leading)
                     Spacer()
-                    LikeButtonView(isLiked: cart.isLiked)
+                    LikeButtonView(cartoon: cartoon)
                 } else {
                     ProgressView()
                         .onAppear {
