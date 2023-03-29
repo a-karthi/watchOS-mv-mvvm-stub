@@ -13,6 +13,10 @@ struct LikedListView: View {
     
     @State var likedList = CartoonList()
     
+    let notificationHandler = NotificationHandler()
+    
+    @StateObject var notificationObserver = NotificationObserver()
+    
     var body: some View {
         NavigationStack {
             List(likedList) { cartoon in
@@ -27,6 +31,15 @@ struct LikedListView: View {
             .onAppear {
                 if let cartoons = cartoonList {
                     self.likedList = cartoons.filter({$0.isLiked == true})
+                }
+            }
+            .onChange(of: notificationObserver.payLoad) { payLoad in
+                if payLoad != nil {
+                    print("***---> Connectivity Communication <---*** \(String(describing: payLoad?.payload?.message))")
+                    if let title = payLoad?.payload?.title,
+                       let msg = payLoad?.payload?.message {
+                        self.notificationHandler.triggerNotification(title, msg)
+                    }
                 }
             }
         }

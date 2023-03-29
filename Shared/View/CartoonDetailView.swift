@@ -11,6 +11,10 @@ struct CartoonDetailView: View {
     
     let cartoon: CartoonNetworkResponse?
     
+    let notificationHandler = NotificationHandler()
+    
+    @StateObject var notificationObserver = NotificationObserver()
+    
     @State var data: Data?
     
     var body: some View {
@@ -41,6 +45,15 @@ struct CartoonDetailView: View {
                         .onAppear {
                             self.fetchData(cartoon?.image ?? "")
                         }
+                }
+            }
+        }
+        .onChange(of: notificationObserver.payLoad) { payLoad in
+            if payLoad != nil {
+                print("***---> Connectivity Communication <---*** \(String(describing: payLoad?.payload?.message))")
+                if let title = payLoad?.payload?.title,
+                   let msg = payLoad?.payload?.message {
+                    self.notificationHandler.triggerNotification(title, msg)
                 }
             }
         }
