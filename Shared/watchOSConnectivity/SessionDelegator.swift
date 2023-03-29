@@ -29,6 +29,13 @@ class SessionDelegator: NSObject, WCSessionDelegate {
     // Monitor WCSession activation state changes.
     //
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        if WCSession.default.activationState == .activated {
+        #if os(watchOS)
+            print("Companion App Installed -> \(WCSession.default.isCompanionAppInstalled)")
+        #else
+            print("Watch App Installed -> \(WCSession.default.isWatchAppInstalled)")
+        #endif
+        }
         postNotificationOnMainQueueAsync(name: .activationDidComplete)
     }
     
@@ -42,7 +49,7 @@ class SessionDelegator: NSObject, WCSessionDelegate {
     //
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String: Any]) {
         var commandStatus = CommandStatus(command: .updateAppContext, phrase: .received)
-        commandStatus.timedColor = TimedColor(applicationContext)
+        commandStatus.payload = PayLoad(applicationContext)
         postNotificationOnMainQueueAsync(name: .dataDidFlow, object: commandStatus)
     }
     
@@ -50,7 +57,7 @@ class SessionDelegator: NSObject, WCSessionDelegate {
     //
     func session(_ session: WCSession, didReceiveMessage message: [String: Any]) {
         var commandStatus = CommandStatus(command: .sendMessage, phrase: .received)
-        commandStatus.timedColor = TimedColor(message)
+        commandStatus.payload = PayLoad(message)
         postNotificationOnMainQueueAsync(name: .dataDidFlow, object: commandStatus)
     }
     
@@ -65,7 +72,7 @@ class SessionDelegator: NSObject, WCSessionDelegate {
     //
     func session(_ session: WCSession, didReceiveMessageData messageData: Data) {
         var commandStatus = CommandStatus(command: .sendMessageData, phrase: .received)
-        commandStatus.timedColor = TimedColor(messageData)
+        commandStatus.payload = PayLoad(messageData)
         postNotificationOnMainQueueAsync(name: .dataDidFlow, object: commandStatus)
     }
     
@@ -80,33 +87,33 @@ class SessionDelegator: NSObject, WCSessionDelegate {
     //
     func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any] = [:]) {
         var commandStatus = CommandStatus(command: .transferUserInfo, phrase: .received)
-        commandStatus.timedColor = TimedColor(userInfo)
+        commandStatus.payload = PayLoad(userInfo)
         
-        if let isComplicationInfo = userInfo[PayloadKey.isCurrentComplicationInfo] as? Bool,
-            isComplicationInfo == true {
-            
-            commandStatus.command = .transferCurrentComplicationUserInfo
-            
-            #if os(watchOS)
-            let server = CLKComplicationServer.sharedInstance()
-            if let complications = server.activeComplications {
-                for complication in complications {
-                    // Call this method sparingly.
-                    // Use extendTimeline(for:) instead when the timeline is still valid.
-                    server.reloadTimeline(for: complication)
-                }
-            }
-
-            #endif
-        }
-        postNotificationOnMainQueueAsync(name: .dataDidFlow, object: commandStatus)
+//        if let isComplicationInfo = userInfo[PayloadKey.isCurrentComplicationInfo] as? Bool,
+//            isComplicationInfo == true {
+//
+//            commandStatus.command = .transferCurrentComplicationUserInfo
+//
+//            #if os(watchOS)
+//            let server = CLKComplicationServer.sharedInstance()
+//            if let complications = server.activeComplications {
+//                for complication in complications {
+//                    // Call this method sparingly.
+//                    // Use extendTimeline(for:) instead when the timeline is still valid.
+//                    server.reloadTimeline(for: complication)
+//                }
+//            }
+//
+//            #endif
+//        }
+//        postNotificationOnMainQueueAsync(name: .dataDidFlow, object: commandStatus)
     }
     
     // Did finish sending a piece of userInfo.
     //
     func session(_ session: WCSession, didFinish userInfoTransfer: WCSessionUserInfoTransfer, error: Error?) {
         var commandStatus = CommandStatus(command: .transferUserInfo, phrase: .finished)
-        commandStatus.timedColor = TimedColor(userInfoTransfer.userInfo)
+        commandStatus.payload = PayLoad(userInfoTransfer.userInfo)
         
         #if os(iOS)
         if userInfoTransfer.isCurrentComplicationInfo {
@@ -125,7 +132,7 @@ class SessionDelegator: NSObject, WCSessionDelegate {
     func session(_ session: WCSession, didReceive file: WCSessionFile) {
         var commandStatus = CommandStatus(command: .transferFile, phrase: .received)
         commandStatus.file = file
-        commandStatus.timedColor = TimedColor(file.metadata!)
+        commandStatus.payload = PayLoad(file.metadata!)
         
         // The system removes WCSessionFile.fileURL once this method returns,
         // so dispatch to main queue synchronously instead of calling
@@ -147,7 +154,7 @@ class SessionDelegator: NSObject, WCSessionDelegate {
             return
         }
         commandStatus.fileTransfer = fileTransfer
-        commandStatus.timedColor = TimedColor(fileTransfer.file.metadata!)
+        commandStatus.payload = PayLoad(fileTransfer.file.metadata!)
 
         #if os(watchOS)
         Logger.shared.clearLogs()

@@ -22,14 +22,16 @@ class NotificationHandler: NSObject, UNUserNotificationCenterDelegate {
         }
     }
 
-    func triggerNotification() {
+    func triggerNotification(_ title: String,_ body: String) {
         let center = UNUserNotificationCenter.current()
+        
+        center.delegate = self
 
         let content = UNMutableNotificationContent()
-        content.title = "Notification Title"
-        content.body = "Notification Body"
+        content.title = title
+        content.body = body
 
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.01, repeats: false)
 
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
 
@@ -58,4 +60,27 @@ class NotificationHandler: NSObject, UNUserNotificationCenterDelegate {
         completionHandler([.banner,.sound])
     }
     
+}
+
+
+class NotificationObserver: ObservableObject {
+    @Published var notificationCount = 0
+    
+    @Published var payLoad: CommandStatus?
+
+    init() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleNotification),
+            name: Notification.Name.dataDidFlow,
+            object: nil
+        )
+    }
+    
+    
+    @objc func handleNotification(_ notification: Notification) {
+        notificationCount += 1
+        guard let commandStatus = notification.object as? CommandStatus else { return }
+        self.payLoad = commandStatus
+    }
 }

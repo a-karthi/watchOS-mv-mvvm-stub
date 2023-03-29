@@ -11,7 +11,7 @@ struct TabBarView: View {
     
     let notificationHandler = NotificationHandler()
     
-    @StateObject var viewModel = CartoonListViewModel()
+    @ObservedObject var viewModel = CartoonListViewModel()
     
     var body: some View {
         TabView {

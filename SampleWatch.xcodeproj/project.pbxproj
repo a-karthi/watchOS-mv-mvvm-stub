@@ -56,8 +56,6 @@
 		CA54AF0B29D307C100C9836B /* SessionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54AF0929D307C100C9836B /* SessionDelegator.swift */; };
 		CA54AF0D29D307DC00C9836B /* CommandStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54AF0C29D307DC00C9836B /* CommandStatus.swift */; };
 		CA54AF0E29D307DC00C9836B /* CommandStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54AF0C29D307DC00C9836B /* CommandStatus.swift */; };
-		CA54AF1029D3081800C9836B /* TestDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54AF0F29D3081800C9836B /* TestDataProvider.swift */; };
-		CA54AF1129D3081800C9836B /* TestDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54AF0F29D3081800C9836B /* TestDataProvider.swift */; };
 		CA54AF1329D3082F00C9836B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54AF1229D3082F00C9836B /* Logger.swift */; };
 		CA54AF1429D3082F00C9836B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54AF1229D3082F00C9836B /* Logger.swift */; };
 		CA54AF1929D30DCB00C9836B /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54AF1829D30DCB00C9836B /* NotificationHandler.swift */; };
@@ -158,7 +156,6 @@
 		CA54AF0529D303D400C9836B /* LikeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButtonView.swift; sourceTree = "<group>"; };
 		CA54AF0929D307C100C9836B /* SessionDelegator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDelegator.swift; sourceTree = "<group>"; };
 		CA54AF0C29D307DC00C9836B /* CommandStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandStatus.swift; sourceTree = "<group>"; };
-		CA54AF0F29D3081800C9836B /* TestDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDataProvider.swift; sourceTree = "<group>"; };
 		CA54AF1229D3082F00C9836B /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		CA54AF1829D30DCB00C9836B /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		CA71C62A29D426A000494C52 /* LikedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedListView.swift; sourceTree = "<group>"; };
@@ -387,7 +384,6 @@
 			isa = PBXGroup;
 			children = (
 				CA54AF1229D3082F00C9836B /* Logger.swift */,
-				CA54AF0F29D3081800C9836B /* TestDataProvider.swift */,
 				CA54AF0C29D307DC00C9836B /* CommandStatus.swift */,
 				CA54AF0929D307C100C9836B /* SessionDelegator.swift */,
 				CA54AF1829D30DCB00C9836B /* NotificationHandler.swift */,
@@ -629,7 +625,6 @@
 				CA3903E029D1831F009261CF /* AppConstants.swift in Sources */,
 				CA39040A29D1BF01009261CF /* CartoonDetailView.swift in Sources */,
 				CA54AF0A29D307C100C9836B /* SessionDelegator.swift in Sources */,
-				CA54AF1029D3081800C9836B /* TestDataProvider.swift in Sources */,
 				CA3903D029D182B3009261CF /* NetworkRequest.swift in Sources */,
 				CA3903DA29D182D9009261CF /* String.swift in Sources */,
 				CA3903F029D185AD009261CF /* CartoonNetworkResponse.swift in Sources */,
@@ -677,7 +672,6 @@
 				CA3903E629D18356009261CF /* ImageDownloader.swift in Sources */,
 				CA39040B29D1BF6A009261CF /* CartoonDetailView.swift in Sources */,
 				CA54AF0B29D307C100C9836B /* SessionDelegator.swift in Sources */,
-				CA54AF1129D3081800C9836B /* TestDataProvider.swift in Sources */,
 				CA39039629D16E2D009261CF /* SampleWatchApp.swift in Sources */,
 				CA3903E729D18359009261CF /* Json.swift in Sources */,
 				CA3903E429D1834C009261CF /* ErrorNetworkResponse.swift in Sources */,

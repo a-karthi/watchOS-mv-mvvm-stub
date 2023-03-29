@@ -34,28 +34,23 @@ enum Phrase: String {
 
 // Wrap a timed color payload dictionary with a stronger type.
 //
-struct TimedColor {
-    var timeStamp: String
-    var colorData: Data
+struct PayLoad {
     
-    var color: UIColor {
-        let optional = ((try? NSKeyedUnarchiver.unarchivedObject(ofClasses: [UIColor.self], from: colorData)) as Any??)
-        guard let color = optional as? UIColor else {
-            fatalError("Failed to unarchive a UIClor object!")
-        }
-        return color
-    }
-    var timedColor: [String: Any] {
-        return [PayloadKey.timeStamp: timeStamp, PayloadKey.colorData: colorData]
+    var title: String
+    
+    var message: String
+    
+    var json: [String: Any] {
+        return [PayloadKey.title: title, PayloadKey.msg: message]
     }
     
     init(_ timedColor: [String: Any]) {
-        guard let timeStamp = timedColor[PayloadKey.timeStamp] as? String,
-            let colorData = timedColor[PayloadKey.colorData] as? Data else {
+        guard let title = timedColor[PayloadKey.title] as? String,
+            let message = timedColor[PayloadKey.msg] as? String else {
                 fatalError("Timed color dictionary doesn't have right keys!")
         }
-        self.timeStamp = timeStamp
-        self.colorData = colorData
+        self.title = title
+        self.message = message
     }
     
     init(_ timedColor: Data) {
@@ -69,10 +64,14 @@ struct TimedColor {
 
 // Wrap the command's status to bridge the commands status and UI.
 //
-struct CommandStatus {
+struct CommandStatus: Equatable {
+    static func == (lhs: CommandStatus, rhs: CommandStatus) -> Bool {
+        return true
+    }
+    
     var command: Command
     var phrase: Phrase
-    var timedColor: TimedColor?
+    var payload: PayLoad?
     var fileTransfer: WCSessionFileTransfer?
     var file: WCSessionFile?
     var userInfoTranser: WCSessionUserInfoTransfer?
@@ -82,4 +81,9 @@ struct CommandStatus {
         self.command = command
         self.phrase = phrase
     }
+}
+
+struct PayloadKey {
+    static let title = "title"
+    static let msg = "msg"
 }

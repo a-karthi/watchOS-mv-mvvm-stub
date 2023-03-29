@@ -12,6 +12,10 @@ struct CartoonListView: View {
     
     var cartoonList: CartoonList?
     
+    let notificationHandler = NotificationHandler()
+    
+    @StateObject var notificationObserver = NotificationObserver()
+    
     @State var selectedCartoon: CartoonNetworkResponse?
     
     var body: some View {
@@ -26,6 +30,15 @@ struct CartoonListView: View {
                     }
                 }
                 .navigationTitle("Cartoons")
+                .onChange(of: notificationObserver.payLoad) { payLoad in
+                    if payLoad != nil {
+                        print("Notification PayLoad changed: \(String(describing: payLoad?.payload?.message))")
+                        if let title = payLoad?.payload?.title,
+                           let msg = payLoad?.payload?.message {
+                            self.notificationHandler.triggerNotification(title, msg)
+                        }
+                    }
+                }
             }
         }
         
