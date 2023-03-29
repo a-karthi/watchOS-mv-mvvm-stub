@@ -18,6 +18,7 @@ class CartoonNetworkResponse: Codable, Identifiable {
     let runtime_in_minutes, episodes: Int
     let image: String
     let id: Int
+    var isLiked = false
 
     enum CodingKeys: String, CodingKey {
         case title, year, creator, rating, genre

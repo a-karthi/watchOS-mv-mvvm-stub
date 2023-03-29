@@ -48,6 +48,20 @@
 		CA39040529D192EA009261CF /* WatchReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA39040329D19252009261CF /* WatchReachability.swift */; };
 		CA39040729D19869009261CF /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA39040629D19869009261CF /* URLImage.swift */; };
 		CA39040829D198F4009261CF /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA39040629D19869009261CF /* URLImage.swift */; };
+		CA39040A29D1BF01009261CF /* CartoonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA39040929D1BF01009261CF /* CartoonDetailView.swift */; };
+		CA39040B29D1BF6A009261CF /* CartoonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA39040929D1BF01009261CF /* CartoonDetailView.swift */; };
+		CA54AF0629D303D400C9836B /* LikeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54AF0529D303D400C9836B /* LikeButtonView.swift */; };
+		CA54AF0729D303D400C9836B /* LikeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54AF0529D303D400C9836B /* LikeButtonView.swift */; };
+		CA54AF0A29D307C100C9836B /* SessionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54AF0929D307C100C9836B /* SessionDelegator.swift */; };
+		CA54AF0B29D307C100C9836B /* SessionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54AF0929D307C100C9836B /* SessionDelegator.swift */; };
+		CA54AF0D29D307DC00C9836B /* CommandStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54AF0C29D307DC00C9836B /* CommandStatus.swift */; };
+		CA54AF0E29D307DC00C9836B /* CommandStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54AF0C29D307DC00C9836B /* CommandStatus.swift */; };
+		CA54AF1029D3081800C9836B /* TestDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54AF0F29D3081800C9836B /* TestDataProvider.swift */; };
+		CA54AF1129D3081800C9836B /* TestDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54AF0F29D3081800C9836B /* TestDataProvider.swift */; };
+		CA54AF1329D3082F00C9836B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54AF1229D3082F00C9836B /* Logger.swift */; };
+		CA54AF1429D3082F00C9836B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54AF1229D3082F00C9836B /* Logger.swift */; };
+		CA54AF1929D30DCB00C9836B /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54AF1829D30DCB00C9836B /* NotificationHandler.swift */; };
+		CA54AF1A29D30DCB00C9836B /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54AF1829D30DCB00C9836B /* NotificationHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,7 +149,14 @@
 		CA3903EF29D185AD009261CF /* CartoonNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartoonNetworkResponse.swift; sourceTree = "<group>"; };
 		CA3903FA29D18EB4009261CF /* CartoonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartoonListView.swift; sourceTree = "<group>"; };
 		CA39040329D19252009261CF /* WatchReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchReachability.swift; sourceTree = "<group>"; };
-		CA39040629D19869009261CF /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
+		CA39040629D19869009261CF /* URLImage.swift */ = {isa = PBXFileReference; indentWidth = 5; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
+		CA39040929D1BF01009261CF /* CartoonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartoonDetailView.swift; sourceTree = "<group>"; };
+		CA54AF0529D303D400C9836B /* LikeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButtonView.swift; sourceTree = "<group>"; };
+		CA54AF0929D307C100C9836B /* SessionDelegator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDelegator.swift; sourceTree = "<group>"; };
+		CA54AF0C29D307DC00C9836B /* CommandStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandStatus.swift; sourceTree = "<group>"; };
+		CA54AF0F29D3081800C9836B /* TestDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDataProvider.swift; sourceTree = "<group>"; };
+		CA54AF1229D3082F00C9836B /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		CA54AF1829D30DCB00C9836B /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +305,7 @@
 		CA3903C929D18286009261CF /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				CA54AF0829D307B400C9836B /* watchOSConnectivity */,
 				CA3903E129D18331009261CF /* Model */,
 				CA3903EC29D184A9009261CF /* View */,
 				CA3903EB29D1849C009261CF /* ViewModel */,
@@ -346,9 +368,23 @@
 			isa = PBXGroup;
 			children = (
 				CA3903FA29D18EB4009261CF /* CartoonListView.swift */,
+				CA39040929D1BF01009261CF /* CartoonDetailView.swift */,
 				CA39040629D19869009261CF /* URLImage.swift */,
+				CA54AF0529D303D400C9836B /* LikeButtonView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CA54AF0829D307B400C9836B /* watchOSConnectivity */ = {
+			isa = PBXGroup;
+			children = (
+				CA54AF1229D3082F00C9836B /* Logger.swift */,
+				CA54AF0F29D3081800C9836B /* TestDataProvider.swift */,
+				CA54AF0C29D307DC00C9836B /* CommandStatus.swift */,
+				CA54AF0929D307C100C9836B /* SessionDelegator.swift */,
+				CA54AF1829D30DCB00C9836B /* NotificationHandler.swift */,
+			);
+			path = watchOSConnectivity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -575,10 +611,17 @@
 			files = (
 				CA3903D929D182D9009261CF /* iOSReachability.swift in Sources */,
 				CA3903DC29D182D9009261CF /* Json.swift in Sources */,
+				CA54AF0D29D307DC00C9836B /* CommandStatus.swift in Sources */,
+				CA54AF1929D30DCB00C9836B /* NotificationHandler.swift in Sources */,
+				CA54AF0629D303D400C9836B /* LikeButtonView.swift in Sources */,
+				CA54AF1329D3082F00C9836B /* Logger.swift in Sources */,
 				CA3903D229D182B3009261CF /* NetworkManager.swift in Sources */,
 				CA3903D129D182B3009261CF /* APIConstants.swift in Sources */,
 				CA39036E29D16E29009261CF /* SampleWatchApp.swift in Sources */,
 				CA3903E029D1831F009261CF /* AppConstants.swift in Sources */,
+				CA39040A29D1BF01009261CF /* CartoonDetailView.swift in Sources */,
+				CA54AF0A29D307C100C9836B /* SessionDelegator.swift in Sources */,
+				CA54AF1029D3081800C9836B /* TestDataProvider.swift in Sources */,
 				CA3903D029D182B3009261CF /* NetworkRequest.swift in Sources */,
 				CA3903DA29D182D9009261CF /* String.swift in Sources */,
 				CA3903F029D185AD009261CF /* CartoonNetworkResponse.swift in Sources */,
@@ -614,10 +657,17 @@
 			files = (
 				CA39040129D18EFB009261CF /* NetworkRequest.swift in Sources */,
 				CA39040029D18EF8009261CF /* NetworkManager.swift in Sources */,
+				CA54AF0E29D307DC00C9836B /* CommandStatus.swift in Sources */,
+				CA54AF1A29D30DCB00C9836B /* NotificationHandler.swift in Sources */,
+				CA54AF0729D303D400C9836B /* LikeButtonView.swift in Sources */,
+				CA54AF1429D3082F00C9836B /* Logger.swift in Sources */,
 				CA39040229D18EFD009261CF /* NetworkRequestCalls.swift in Sources */,
 				CA3903FF29D18EF6009261CF /* APIConstants.swift in Sources */,
 				CA3903FD29D18ED9009261CF /* CartoonListViewModel.swift in Sources */,
 				CA3903E629D18356009261CF /* ImageDownloader.swift in Sources */,
+				CA39040B29D1BF6A009261CF /* CartoonDetailView.swift in Sources */,
+				CA54AF0B29D307C100C9836B /* SessionDelegator.swift in Sources */,
+				CA54AF1129D3081800C9836B /* TestDataProvider.swift in Sources */,
 				CA39039629D16E2D009261CF /* SampleWatchApp.swift in Sources */,
 				CA3903E729D18359009261CF /* Json.swift in Sources */,
 				CA3903E429D1834C009261CF /* ErrorNetworkResponse.swift in Sources */,
