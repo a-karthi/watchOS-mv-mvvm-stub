@@ -9,6 +9,8 @@ import SwiftUI
 
 struct TabBarView: View {
     
+    let notificationHandler = NotificationHandler()
+    
     @StateObject var viewModel = CartoonListViewModel()
     
     var body: some View {
@@ -26,6 +28,7 @@ struct TabBarView: View {
             if viewModel.cartoonList.isEmpty {
                 viewModel.getCartoonListDetails()
             }
+            notificationHandler.requestAuthorization()
         }
     }
 }

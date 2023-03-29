@@ -32,8 +32,7 @@ struct LikeButtonView: View {
             cart.isLiked = !cart.isLiked
             self.isLiked = cart.isLiked
             if cart.isLiked {
-                notificationHandler.requestAuthorization()
-                notificationHandler.scheduleNotification(title: "CNTV", subtitle: "Liked!", body: "You Liked", date: Date())
+                notificationHandler.triggerNotification()
             }
         }
     }

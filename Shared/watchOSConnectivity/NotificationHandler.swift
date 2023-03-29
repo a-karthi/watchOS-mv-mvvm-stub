@@ -21,35 +21,41 @@ class NotificationHandler: NSObject, UNUserNotificationCenterDelegate {
             }
         }
     }
-    
-    func scheduleNotification(title: String, subtitle: String, body: String, date: Date) {
-        // Create the notification content
+
+    func triggerNotification() {
+        let center = UNUserNotificationCenter.current()
+
         let content = UNMutableNotificationContent()
-        content.title = title
-        content.subtitle = subtitle
-        content.body = body
-        content.sound = UNNotificationSound.default
-        
-        // Create the notification trigger
-        let components = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: date)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
-        
-        // Create the notification request
+        content.title = "Notification Title"
+        content.body = "Notification Body"
+
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-        
-        // Schedule the notification
-        UNUserNotificationCenter.current().add(request) { error in
+
+        center.requestAuthorization(options: [.alert, .badge, .sound]) { granted, error in
             if let error = error {
-                print("Error scheduling notification: \(error.localizedDescription)")
+                print("Error requesting authorization: \(error.localizedDescription)")
+                return
+            }
+            if granted {
+                center.add(request) { error in
+                    if let error = error {
+                        print("Error adding notification request: \(error.localizedDescription)")
+                    } else {
+                        print("Notification request added successfully")
+                    }
+                }
             } else {
-                print("Notification scheduled successfully")
+                print("Permission denied for notifications")
             }
         }
     }
+
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         // Handle the notification while the app is in the foreground
-        completionHandler([.alert, .sound])
+        completionHandler([.banner,.sound])
     }
     
 }
