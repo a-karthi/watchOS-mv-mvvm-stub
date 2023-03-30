@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA38D1F429D58B9E007B90D8 /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA38D1F329D58B9E007B90D8 /* HeartRateView.swift */; };
+		CA38D1F529D58B9E007B90D8 /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA38D1F329D58B9E007B90D8 /* HeartRateView.swift */; };
 		CA39036E29D16E29009261CF /* SampleWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA39036D29D16E29009261CF /* SampleWatchApp.swift */; };
 		CA39037229D16E2C009261CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA39037129D16E2C009261CF /* Assets.xcassets */; };
 		CA39037529D16E2C009261CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA39037429D16E2C009261CF /* Preview Assets.xcassets */; };
@@ -119,6 +121,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CA38D1F229D58B0A007B90D8 /* SampleWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SampleWatch.entitlements; sourceTree = "<group>"; };
+		CA38D1F329D58B9E007B90D8 /* HeartRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateView.swift; sourceTree = "<group>"; };
+		CA38D1FA29D59047007B90D8 /* SampleWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SampleWatch Watch App.entitlements"; sourceTree = "<group>"; };
 		CA39036A29D16E29009261CF /* SampleWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA39036D29D16E29009261CF /* SampleWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleWatchApp.swift; sourceTree = "<group>"; };
 		CA39037129D16E2C009261CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -238,6 +243,7 @@
 		CA39036C29D16E29009261CF /* SampleWatch */ = {
 			isa = PBXGroup;
 			children = (
+				CA38D1F229D58B0A007B90D8 /* SampleWatch.entitlements */,
 				CA39036D29D16E29009261CF /* SampleWatchApp.swift */,
 				CA39037129D16E2C009261CF /* Assets.xcassets */,
 				CA39037329D16E2C009261CF /* Preview Content */,
@@ -273,6 +279,7 @@
 		CA39039429D16E2D009261CF /* SampleWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				CA38D1FA29D59047007B90D8 /* SampleWatch Watch App.entitlements */,
 				CA39039529D16E2D009261CF /* SampleWatchApp.swift */,
 				CA39039929D16E2E009261CF /* Assets.xcassets */,
 				CA39039B29D16E2E009261CF /* Preview Content */,
@@ -376,6 +383,7 @@
 				CA54AF0529D303D400C9836B /* LikeButtonView.swift */,
 				CAE651AB29D4148B003C0BA7 /* TabBarView.swift */,
 				CA71C62A29D426A000494C52 /* LikedListView.swift */,
+				CA38D1F329D58B9E007B90D8 /* HeartRateView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -630,6 +638,7 @@
 				CA3903F029D185AD009261CF /* CartoonNetworkResponse.swift in Sources */,
 				CA3903E329D1833D009261CF /* ErrorNetworkResponse.swift in Sources */,
 				CA3903DB29D182D9009261CF /* ImageDownloader.swift in Sources */,
+				CA38D1F429D58B9E007B90D8 /* HeartRateView.swift in Sources */,
 				CA3903FB29D18EB4009261CF /* CartoonListView.swift in Sources */,
 				CAE651AC29D4148B003C0BA7 /* TabBarView.swift in Sources */,
 				CA3903CF29D182B3009261CF /* NetworkRequestCalls.swift in Sources */,
@@ -677,6 +686,7 @@
 				CA3903E429D1834C009261CF /* ErrorNetworkResponse.swift in Sources */,
 				CA3903FC29D18ECA009261CF /* CartoonListView.swift in Sources */,
 				CA39040529D192EA009261CF /* WatchReachability.swift in Sources */,
+				CA38D1F529D58B9E007B90D8 /* HeartRateView.swift in Sources */,
 				CA3903E929D1835E009261CF /* String.swift in Sources */,
 				CAE651AD29D4148B003C0BA7 /* TabBarView.swift in Sources */,
 				CA3903FE29D18EDF009261CF /* CartoonNetworkResponse.swift in Sources */,
@@ -848,6 +858,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SampleWatch Watch App/SampleWatch Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SampleWatch Watch App/Preview Content\"";
@@ -855,6 +866,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = SampleWatch;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Please give access for health records usage access,to get your heart rate";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please give access for health share access,to get your heart rate";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Please give access for health update access,to get your heart rate";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.obs.SampleWatch;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -878,6 +892,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SampleWatch Watch App/SampleWatch Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SampleWatch Watch App/Preview Content\"";
@@ -885,6 +900,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = SampleWatch;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Please give access for health records usage access,to get your heart rate";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please give access for health share access,to get your heart rate";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Please give access for health update access,to get your heart rate";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.obs.SampleWatch;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -910,6 +928,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SampleWatch/SampleWatch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SampleWatch/Preview Content\"";
@@ -917,6 +936,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = SampleWatch;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Please give access for health records usage access,to get your heart rate";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please give access for health share access,to get your heart rate";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Please give access for health update access,to get your rate";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -943,6 +965,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SampleWatch/SampleWatch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SampleWatch/Preview Content\"";
@@ -950,6 +973,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = SampleWatch;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Please give access for health records usage access,to get your heart rate";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please give access for health share access,to get your heart rate";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Please give access for health update access,to get your rate";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

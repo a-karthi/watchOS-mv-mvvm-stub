@@ -23,6 +23,10 @@ struct TabBarView: View {
                         .tabItem {
                             Image(systemName: "heart.fill")
                         }
+            HeartRateView()
+                .tabItem {
+                    Image(systemName: "heart.fill")
+                }
         }
         .onAppear{
             if viewModel.cartoonList.isEmpty {
