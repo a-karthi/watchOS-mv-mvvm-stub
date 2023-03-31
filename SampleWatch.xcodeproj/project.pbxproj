@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA330BFF29D6CAC6003A5F46 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA330BD929D6B6B6003A5F46 /* ComplicationController.swift */; };
+		CA330C0029D6CAC6003A5F46 /* ComplicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA330BD629D6B2B6003A5F46 /* ComplicationView.swift */; };
+		CA330C0829D6CB62003A5F46 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA330C0729D6CB62003A5F46 /* WidgetKit.framework */; };
+		CA330C0A29D6CB62003A5F46 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA330C0929D6CB62003A5F46 /* SwiftUI.framework */; };
+		CA330C1029D6CB65003A5F46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA330C0F29D6CB65003A5F46 /* Assets.xcassets */; };
+		CA330C1229D6CB65003A5F46 /* CntvExt.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = CA330C0E29D6CB63003A5F46 /* CntvExt.intentdefinition */; };
+		CA330C1329D6CB65003A5F46 /* CntvExt.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = CA330C0E29D6CB63003A5F46 /* CntvExt.intentdefinition */; };
+		CA330C1629D6CB65003A5F46 /* CntvExtExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CA330C0529D6CB62003A5F46 /* CntvExtExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CA330C1E29D6E0D6003A5F46 /* CntvExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA330C0C29D6CB63003A5F46 /* CntvExt.swift */; };
 		CA38D1F429D58B9E007B90D8 /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA38D1F329D58B9E007B90D8 /* HeartRateView.swift */; };
 		CA38D1F529D58B9E007B90D8 /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA38D1F329D58B9E007B90D8 /* HeartRateView.swift */; };
 		CA39036E29D16E29009261CF /* SampleWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA39036D29D16E29009261CF /* SampleWatchApp.swift */; };
@@ -69,6 +78,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CA330C1429D6CB65003A5F46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA39036229D16E29009261CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA330C0429D6CB62003A5F46;
+			remoteInfo = CntvExtExtension;
+		};
 		CA39037B29D16E2D009261CF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CA39036229D16E29009261CF /* Project object */;
@@ -107,6 +123,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		CA330BD229D6B233003A5F46 /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA330BEB29D6BD6F003A5F46 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CA330C1629D6CB65003A5F46 /* CntvExtExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA3903B929D16E2E009261CF /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -121,6 +158,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CA330BD629D6B2B6003A5F46 /* ComplicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationView.swift; sourceTree = "<group>"; };
+		CA330BD929D6B6B6003A5F46 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		CA330C0529D6CB62003A5F46 /* CntvExtExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CntvExtExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA330C0729D6CB62003A5F46 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		CA330C0929D6CB62003A5F46 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		CA330C0C29D6CB63003A5F46 /* CntvExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CntvExt.swift; sourceTree = "<group>"; };
+		CA330C0E29D6CB63003A5F46 /* CntvExt.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = CntvExt.intentdefinition; sourceTree = "<group>"; };
+		CA330C0F29D6CB65003A5F46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CA330C1129D6CB65003A5F46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA38D1F229D58B0A007B90D8 /* SampleWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SampleWatch.entitlements; sourceTree = "<group>"; };
 		CA38D1F329D58B9E007B90D8 /* HeartRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateView.swift; sourceTree = "<group>"; };
 		CA38D1FA29D59047007B90D8 /* SampleWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SampleWatch Watch App.entitlements"; sourceTree = "<group>"; };
@@ -168,6 +214,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CA330C0229D6CB62003A5F46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA330C0A29D6CB62003A5F46 /* SwiftUI.framework in Frameworks */,
+				CA330C0829D6CB62003A5F46 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA39036729D16E29009261CF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -213,6 +268,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA330C0629D6CB62003A5F46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA330C0729D6CB62003A5F46 /* WidgetKit.framework */,
+				CA330C0929D6CB62003A5F46 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA330C0B29D6CB63003A5F46 /* CntvExt */ = {
+			isa = PBXGroup;
+			children = (
+				CA330C0C29D6CB63003A5F46 /* CntvExt.swift */,
+				CA330C0E29D6CB63003A5F46 /* CntvExt.intentdefinition */,
+				CA330C0F29D6CB65003A5F46 /* Assets.xcassets */,
+				CA330C1129D6CB65003A5F46 /* Info.plist */,
+			);
+			path = CntvExt;
+			sourceTree = "<group>";
+		};
 		CA39036129D16E29009261CF = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +298,8 @@
 				CA39039429D16E2D009261CF /* SampleWatch Watch App */,
 				CA3903A529D16E2E009261CF /* SampleWatch Watch AppTests */,
 				CA3903AF29D16E2E009261CF /* SampleWatch Watch AppUITests */,
+				CA330C0B29D6CB63003A5F46 /* CntvExt */,
+				CA330C0629D6CB62003A5F46 /* Frameworks */,
 				CA39036B29D16E29009261CF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -236,6 +313,7 @@
 				CA39039029D16E2D009261CF /* SampleWatch Watch App.app */,
 				CA3903A229D16E2E009261CF /* SampleWatch Watch AppTests.xctest */,
 				CA3903AC29D16E2E009261CF /* SampleWatch Watch AppUITests.xctest */,
+				CA330C0529D6CB62003A5F46 /* CntvExtExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -280,6 +358,8 @@
 			isa = PBXGroup;
 			children = (
 				CA38D1FA29D59047007B90D8 /* SampleWatch Watch App.entitlements */,
+				CA330BD929D6B6B6003A5F46 /* ComplicationController.swift */,
+				CA330BD629D6B2B6003A5F46 /* ComplicationView.swift */,
 				CA39039529D16E2D009261CF /* SampleWatchApp.swift */,
 				CA39039929D16E2E009261CF /* Assets.xcassets */,
 				CA39039B29D16E2E009261CF /* Preview Content */,
@@ -402,6 +482,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CA330C0429D6CB62003A5F46 /* CntvExtExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA330C1729D6CB65003A5F46 /* Build configuration list for PBXNativeTarget "CntvExtExtension" */;
+			buildPhases = (
+				CA330C0129D6CB62003A5F46 /* Sources */,
+				CA330C0229D6CB62003A5F46 /* Frameworks */,
+				CA330C0329D6CB62003A5F46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CntvExtExtension;
+			productName = CntvExtExtension;
+			productReference = CA330C0529D6CB62003A5F46 /* CntvExtExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		CA39036929D16E29009261CF /* SampleWatch */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA3903BA29D16E2E009261CF /* Build configuration list for PBXNativeTarget "SampleWatch" */;
@@ -464,10 +561,13 @@
 				CA39038C29D16E2D009261CF /* Sources */,
 				CA39038D29D16E2D009261CF /* Frameworks */,
 				CA39038E29D16E2D009261CF /* Resources */,
+				CA330BD229D6B233003A5F46 /* Embed ExtensionKit Extensions */,
+				CA330BEB29D6BD6F003A5F46 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CA330C1529D6CB65003A5F46 /* PBXTargetDependency */,
 			);
 			name = "SampleWatch Watch App";
 			productName = "SampleWatch Watch App";
@@ -520,6 +620,9 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					CA330C0429D6CB62003A5F46 = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					CA39036929D16E29009261CF = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -563,11 +666,20 @@
 				CA39038F29D16E2D009261CF /* SampleWatch Watch App */,
 				CA3903A129D16E2E009261CF /* SampleWatch Watch AppTests */,
 				CA3903AB29D16E2E009261CF /* SampleWatch Watch AppUITests */,
+				CA330C0429D6CB62003A5F46 /* CntvExtExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CA330C0329D6CB62003A5F46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA330C1029D6CB65003A5F46 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA39036829D16E29009261CF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -617,6 +729,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CA330C0129D6CB62003A5F46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA330C1E29D6E0D6003A5F46 /* CntvExt.swift in Sources */,
+				CA330C1229D6CB65003A5F46 /* CntvExt.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA39036629D16E29009261CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -681,13 +802,16 @@
 				CA3903E629D18356009261CF /* ImageDownloader.swift in Sources */,
 				CA39040B29D1BF6A009261CF /* CartoonDetailView.swift in Sources */,
 				CA54AF0B29D307C100C9836B /* SessionDelegator.swift in Sources */,
+				CA330BFF29D6CAC6003A5F46 /* ComplicationController.swift in Sources */,
 				CA39039629D16E2D009261CF /* SampleWatchApp.swift in Sources */,
 				CA3903E729D18359009261CF /* Json.swift in Sources */,
 				CA3903E429D1834C009261CF /* ErrorNetworkResponse.swift in Sources */,
 				CA3903FC29D18ECA009261CF /* CartoonListView.swift in Sources */,
 				CA39040529D192EA009261CF /* WatchReachability.swift in Sources */,
 				CA38D1F529D58B9E007B90D8 /* HeartRateView.swift in Sources */,
+				CA330C1329D6CB65003A5F46 /* CntvExt.intentdefinition in Sources */,
 				CA3903E929D1835E009261CF /* String.swift in Sources */,
+				CA330C0029D6CAC6003A5F46 /* ComplicationView.swift in Sources */,
 				CAE651AD29D4148B003C0BA7 /* TabBarView.swift in Sources */,
 				CA3903FE29D18EDF009261CF /* CartoonNetworkResponse.swift in Sources */,
 				CA39040829D198F4009261CF /* URLImage.swift in Sources */,
@@ -716,6 +840,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CA330C1529D6CB65003A5F46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA330C0429D6CB62003A5F46 /* CntvExtExtension */;
+			targetProxy = CA330C1429D6CB65003A5F46 /* PBXContainerItemProxy */;
+		};
 		CA39037C29D16E2D009261CF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CA39036929D16E29009261CF /* SampleWatch */;
@@ -744,6 +873,67 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		CA330C1829D6CB65003A5F46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J8G8DUU33R;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CntvExt/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CntvExt;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.obs.SampleWatch.watchkitapp.CntvExt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		CA330C1929D6CB65003A5F46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J8G8DUU33R;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CntvExt/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CntvExt;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.obs.SampleWatch.watchkitapp.CntvExt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
 		CA3903B429D16E2E009261CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -856,6 +1046,7 @@
 		CA3903B729D16E2E009261CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "SampleWatch Watch App/SampleWatch Watch App.entitlements";
@@ -890,6 +1081,7 @@
 		CA3903B829D16E2E009261CF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "SampleWatch Watch App/SampleWatch Watch App.entitlements";
@@ -1168,6 +1360,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CA330C1729D6CB65003A5F46 /* Build configuration list for PBXNativeTarget "CntvExtExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA330C1829D6CB65003A5F46 /* Debug */,
+				CA330C1929D6CB65003A5F46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CA39036529D16E29009261CF /* Build configuration list for PBXProject "SampleWatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
